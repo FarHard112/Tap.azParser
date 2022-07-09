@@ -7,7 +7,9 @@ C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\Ht
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\WebDriver.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.csproj.AssemblyReference.cache
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.ChooseParser.resources
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.Form1.resources
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.LalafoParser.resources
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.csproj.GenerateResource.cache
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.AssemblyInfoInputs.cache

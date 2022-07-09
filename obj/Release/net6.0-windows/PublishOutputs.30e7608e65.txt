@@ -1,0 +1,8 @@
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.exe
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.dll
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.deps.json
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.runtimeconfig.json
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.pdb
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\HtmlAgilityPack.dll
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\WebDriver.dll
