@@ -4,13 +4,13 @@
     <_LastSelectedProfileId>C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="BinaAZ\Binaaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ChooseParser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="LalafoParser.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -43,16 +43,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(63, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 40);
+            this.label1.Size = new System.Drawing.Size(154, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Parse link :";
+            this.label1.Text = "Parse category :";
             // 
             // txtSiteLink
             // 
-            this.txtSiteLink.Location = new System.Drawing.Point(189, 16);
+            this.txtSiteLink.Location = new System.Drawing.Point(223, 12);
             this.txtSiteLink.Multiline = true;
             this.txtSiteLink.Name = "txtSiteLink";
             this.txtSiteLink.Size = new System.Drawing.Size(328, 45);
@@ -62,8 +62,8 @@
             // 
             // btnParse
             // 
-            this.btnParse.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnParse.Location = new System.Drawing.Point(190, 67);
+            this.btnParse.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnParse.Location = new System.Drawing.Point(24, 134);
             this.btnParse.Name = "btnParse";
             this.btnParse.Size = new System.Drawing.Size(105, 47);
             this.btnParse.TabIndex = 2;
@@ -73,8 +73,8 @@
             // 
             // btnSaveNumbers
             // 
-            this.btnSaveNumbers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveNumbers.Location = new System.Drawing.Point(301, 67);
+            this.btnSaveNumbers.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveNumbers.Location = new System.Drawing.Point(24, 198);
             this.btnSaveNumbers.Name = "btnSaveNumbers";
             this.btnSaveNumbers.Size = new System.Drawing.Size(105, 47);
             this.btnSaveNumbers.TabIndex = 3;
@@ -85,25 +85,25 @@
             // lblNeedToParse
             // 
             this.lblNeedToParse.AutoSize = true;
-            this.lblNeedToParse.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNeedToParse.Location = new System.Drawing.Point(347, 127);
+            this.lblNeedToParse.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNeedToParse.Location = new System.Drawing.Point(421, 77);
             this.lblNeedToParse.Name = "lblNeedToParse";
-            this.lblNeedToParse.Size = new System.Drawing.Size(34, 40);
+            this.lblNeedToParse.Size = new System.Drawing.Size(32, 40);
             this.lblNeedToParse.TabIndex = 6;
             this.lblNeedToParse.Text = "0";
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(37, 170);
+            this.txtAuthor.Location = new System.Drawing.Point(164, 124);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(537, 187);
+            this.txtAuthor.Size = new System.Drawing.Size(483, 187);
             this.txtAuthor.TabIndex = 7;
             this.txtAuthor.Text = "";
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.Location = new System.Drawing.Point(412, 67);
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.Location = new System.Drawing.Point(24, 264);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(105, 47);
             this.btnClear.TabIndex = 8;
@@ -114,20 +114,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(326, 127);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(398, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 40);
+            this.label2.Size = new System.Drawing.Size(28, 40);
             this.label2.TabIndex = 9;
             this.label2.Text = "/";
             // 
             // lblInProcess
             // 
             this.lblInProcess.AutoSize = true;
-            this.lblInProcess.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInProcess.Location = new System.Drawing.Point(286, 127);
+            this.lblInProcess.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInProcess.Location = new System.Drawing.Point(360, 77);
             this.lblInProcess.Name = "lblInProcess";
-            this.lblInProcess.Size = new System.Drawing.Size(34, 40);
+            this.lblInProcess.Size = new System.Drawing.Size(32, 40);
             this.lblInProcess.TabIndex = 10;
             this.lblInProcess.Text = "0";
             // 
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 369);
+            this.ClientSize = new System.Drawing.Size(674, 322);
             this.Controls.Add(this.lblInProcess);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClear);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.txtSiteLink);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tap az Parser";
