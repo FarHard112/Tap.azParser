@@ -11,6 +11,8 @@ namespace TapazParser
         private static List<string> AddLinks = new List<string>();
         private static List<Author> Authors = new List<Author>();
         private static int InProcess = 0;
+        private static bool driverInit = false;
+        private IWebDriver driver;
 
         public Form1()
         {
@@ -32,6 +34,7 @@ namespace TapazParser
                     ParseNumberAndName(item);
                 }
             });
+            driver.Quit();
         }
 
         private void ParseNumberAndName(string url)
@@ -88,9 +91,9 @@ namespace TapazParser
                                         var authorNumber = document.DocumentNode.SelectSingleNode(".//div[@class='author']//a[@class='phone']");
                                         var authorNumberString = authorNumber.InnerText;
                                         authorNumberString = authorNumberString.Replace('(', ' ');
-                                    authorNumberString = authorNumberString.Replace(')', ' ');
-                                    authorNumberString = authorNumberString.Replace('-', ' ');
-                                    authorNumberString=authorNumberString.Replace(" ", "");
+                                        authorNumberString = authorNumberString.Replace(')', ' ');
+                                        authorNumberString = authorNumberString.Replace('-', ' ');
+                                        authorNumberString = authorNumberString.Replace(" ", "");
                                         var authorName =
                                             document.DocumentNode.SelectSingleNode(
                                                 ".//div[@class='name']");
@@ -125,16 +128,24 @@ namespace TapazParser
 
         #region ParsingWithSelenium
 
+        public void DriverInit()
+        {
+            var driverService = ChromeDriverService.CreateDefaultService();
+            var options = new ChromeOptions();
+            options.AddArgument("headless");
+            driverService.HideCommandPromptWindow = true;
+            driver = new ChromeDriver(driverService, options);
+            driverInit = true;
+        }
+
         private void ParseWithSelenium(string url)
         {
             try
             {
-                IWebDriver driver;
-                var driverService = ChromeDriverService.CreateDefaultService();
-                var options = new ChromeOptions();
-                options.AddArgument("headless");
-                driverService.HideCommandPromptWindow = true;
-                driver = new ChromeDriver(driverService, options);
+                if (!driverInit)
+                {
+                    DriverInit();
+                }
                 driver.Navigate().GoToUrl(url);
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
                 wait.Until(driver => driver.FindElement(By.ClassName("logo")));
@@ -152,7 +163,6 @@ namespace TapazParser
                 {
                     AddLinks.Add(link.GetAttribute("href").ToString()); ;
                 }
-                driver.Close();
             }
             catch (Exception e)
             {
@@ -189,5 +199,11 @@ namespace TapazParser
         }
 
         #endregion SaveFile
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            driver.Quit();
+            Environment.Exit(0);
+        }
     }
 }

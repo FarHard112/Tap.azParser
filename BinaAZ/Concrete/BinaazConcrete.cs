@@ -8,7 +8,8 @@ namespace TapazParser.BinaAZ.Concrete;
 
 public class BinaazConcrete : IBinaaz
 {
-    private IWebDriver driver;
+    public IWebDriver driver;
+    private static bool driverInit = false;
 
     public List<string> CollectAdds(int pageNumber)
     {
@@ -46,15 +47,24 @@ public class BinaazConcrete : IBinaaz
         return null;
     }
 
+    public void DriverInit()
+    {
+        var driverService = ChromeDriverService.CreateDefaultService();
+        var options = new ChromeOptions();
+        options.AddArgument("headless");
+        driverService.HideCommandPromptWindow = true;
+        driver = new ChromeDriver(driverService, options);
+        driverInit = true;
+    }
+
     public BinaAZModel CollectNumberAndName(string link)
     {
         try
         {
-            var driverService = ChromeDriverService.CreateDefaultService();
-            var options = new ChromeOptions();
-            options.AddArgument("headless");
-            driverService.HideCommandPromptWindow = true;
-            driver = new ChromeDriver(driverService, options);
+            if (!driverInit)
+            {
+                DriverInit();
+            }
             driver.Navigate().GoToUrl($"https://bina.az{link}");
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             wait.Until(driver => driver.FindElement(By.ClassName("location")));
@@ -69,12 +79,10 @@ public class BinaazConcrete : IBinaaz
             var showedPhoneText = afterClickPhone.Text;
             var showedPhoneTextFirst = showedPhoneText.Split(" ").First().Replace("(", "").Replace(")", "").Replace("0", "");
             var showedPhoneTextLast = showedPhoneText.Split(" ").Last().Replace("-", "");
-            driver.Close();
             return new BinaAZModel() { Name = Name, Number = showedPhoneTextFirst + showedPhoneTextLast };
         }
         catch (Exception e)
         {
-            driver.Close();
             return null;
         }
     }
