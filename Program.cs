@@ -3,6 +3,8 @@ using Microsoft.Extensions.Hosting;
 using TapazParser.BinaAZ;
 using TapazParser.BinaAZ.Abstract;
 using TapazParser.BinaAZ.Concrete;
+using TapazParser.Turbo.az.Abstract;
+using TapazParser.Turbo.az.Concrete;
 
 namespace TapazParser
 {
@@ -18,7 +20,7 @@ namespace TapazParser
             ServiceProvider = host.Services;
 
             ApplicationConfiguration.Initialize();
-            Application.Run(ServiceProvider.GetRequiredService<ChooseParser>());
+            Application.Run(ServiceProvider.GetRequiredService<Turbo.az.Turbo>());
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -31,6 +33,8 @@ namespace TapazParser
                     services.AddTransient<ChooseParser>();
                     services.AddTransient<Form1>();
                     services.AddTransient<Binaaz>();
+                    services.AddTransient<Turbo.az.Turbo>();
+                    services.AddTransient<ITurboAz, TurboConcrete>();
                     services.AddTransient<IBinaaz, BinaazConcrete>();
                 });
         }

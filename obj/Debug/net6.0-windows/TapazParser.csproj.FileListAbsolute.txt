@@ -52,3 +52,6 @@ C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\Mi
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.BinaAZ.Binaaz.resources
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Debug\net6.0-windows\az\TapazParser.resources.dll
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\TapazParser.Turbo.az.Turbo.az.resources
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\obj\Debug\net6.0-windows\az\TapazParser.resources.dll

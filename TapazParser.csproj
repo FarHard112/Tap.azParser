@@ -20,6 +20,9 @@
     <Folder Include="BinaAZ\Abstract\" />
     <Folder Include="BinaAZ\Concrete\" />
     <Folder Include="Model\BinaAZ\" />
+    <Folder Include="Model\TurboAZ\" />
+    <Folder Include="Turbo.az\Abstract\" />
+    <Folder Include="Turbo.az\Concrete\" />
     <Folder Include="Whatsapp\" />
   </ItemGroup>
 

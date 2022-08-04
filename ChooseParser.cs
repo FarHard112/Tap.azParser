@@ -8,11 +8,13 @@ namespace TapazParser
     {
         private readonly Form1 _tapaz;
         private readonly Binaaz _binaaz;
+        private readonly Turbo.az.Turbo _turboAz;
 
-        public ChooseParser(Form1 tapaz, Binaaz binaaz)
+        public ChooseParser(Form1 tapaz, Binaaz binaaz, Turbo.az.Turbo turboAZ)
         {
             _tapaz = tapaz;
             _binaaz = binaaz;
+            _turboAz = turboAZ;
             InitializeComponent();
         }
 
@@ -24,6 +26,7 @@ namespace TapazParser
 
         private void btnLalafo_Click(object sender, EventArgs e)
         {
+            _turboAz.Show();
             this.Hide();
         }
 

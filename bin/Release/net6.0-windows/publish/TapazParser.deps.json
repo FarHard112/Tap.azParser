@@ -16,6 +16,11 @@
         },
         "runtime": {
           "TapazParser.dll": {}
+        },
+        "resources": {
+          "az/TapazParser.resources.dll": {
+            "locale": "az"
+          }
         }
       },
       "HtmlAgilityPack/1.11.43": {

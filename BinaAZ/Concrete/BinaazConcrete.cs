@@ -10,6 +10,7 @@ public class BinaazConcrete : IBinaaz
 {
     public IWebDriver driver;
     private static bool driverInit = false;
+    private int counter = 1;
 
     public List<string> CollectAdds(int pageNumber)
     {
@@ -21,24 +22,29 @@ public class BinaazConcrete : IBinaaz
             {
                 using (HttpClient client = new HttpClient(handler))
                 {
-                    using (HttpResponseMessage responseMessage = client.GetAsync($"https://bina.az/items/all?page=" + pageNumber).Result)
+                    while (counter < pageNumber)
                     {
-                        if (responseMessage.IsSuccessStatusCode)
+                        using (HttpResponseMessage responseMessage = client.GetAsync($"https://bina.az/items/all?page=" + counter).Result)
                         {
-                            var html = responseMessage.Content.ReadAsStringAsync().Result;
-                            HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
-                            document.LoadHtml(html);
-                            var links = document.DocumentNode.SelectNodes(".//div[@class='items-i']//a");
-                            foreach (var link in links)
+                            if (responseMessage.IsSuccessStatusCode)
                             {
-                                string href = link.GetAttributeValue("href", String.Empty);
-                                CollectedLinks.Add(href);
+                                var html = responseMessage.Content.ReadAsStringAsync().Result;
+                                HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
+                                document.LoadHtml(html);
+                                var links = document.DocumentNode.SelectNodes(".//div[@class='items-i']//a");
+                                foreach (var link in links)
+                                {
+                                    string href = link.GetAttributeValue("href", String.Empty);
+                                    CollectedLinks.Add(href);
+                                }
+
+                                counter++;
                             }
-                            return CollectedLinks;
                         }
                     }
                 }
             }
+            return CollectedLinks;
         }
         catch (Exception e)
         {

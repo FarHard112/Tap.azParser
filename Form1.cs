@@ -8,14 +8,16 @@ namespace TapazParser
 {
     public partial class Form1 : Form
     {
+        private readonly ChooseParser _chooseParser;
         private static List<string> AddLinks = new List<string>();
         private static List<Author> Authors = new List<Author>();
         private static int InProcess = 0;
         private static bool driverInit = false;
         private IWebDriver driver;
 
-        public Form1()
+        public Form1(ChooseParser chooseParser)
         {
+            _chooseParser = chooseParser;
             InitializeComponent();
         }
 
@@ -202,8 +204,21 @@ namespace TapazParser
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            driver.Quit();
-            Environment.Exit(0);
+            if (driver == null)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                driver.Quit();
+                Environment.Exit(0);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            _chooseParser.Show();
+            this.Hide();
         }
     }
 }

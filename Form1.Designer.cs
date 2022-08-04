@@ -38,6 +38,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblInProcess = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +132,22 @@
             this.lblInProcess.TabIndex = 10;
             this.lblInProcess.Text = "0";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(587, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 322);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblInProcess);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClear);
@@ -167,5 +179,6 @@
         private Button btnClear;
         private Label label2;
         private Label lblInProcess;
+        private Button btnBack;
     }
 }

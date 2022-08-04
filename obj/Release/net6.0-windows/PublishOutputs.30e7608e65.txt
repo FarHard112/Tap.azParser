@@ -3,6 +3,7 @@ C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.deps.json
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.runtimeconfig.json
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\TapazParser.pdb
+C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\az\TapazParser.resources.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\HtmlAgilityPack.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\Microsoft.Extensions.Configuration.dll
 C:\Users\MSI-PC\source\repos\TapazParser\TapazParser\bin\Release\net6.0-windows\publish\Microsoft.Extensions.Configuration.Abstractions.dll
